@@ -2,7 +2,32 @@
   "name": "word",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": {},
+  "repository": "https://github.com/sukusuku2017/word.git",
   "author": "GimYoungPhil <youngphil.gim@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "develop": "export NODE_ENV=development && webpack-dev-server --config ./config/webpack.develop.js",
+    "product": "export NODE_ENV=product && webpack --config ./config/webpack.product.js",
+    "preproduct": "rimraf dist",
+    "server": "cd dist && python -m SimpleHTTPServer 8000"
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.26.0",
+    "rimraf": "^2.5.4",
+    "vue-loader": "^10.1.0",
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "beta",
+    "webpack-dev-server": "beta",
+    "webpack-merge": "^2.5.0"
+  },
+  "dependencies": {
+    "vue": "^2.1.10",
+    "vue-router": "^2.2.0",
+    "vuex": "^2.1.1"
+  }
 }
