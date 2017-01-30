@@ -3,8 +3,8 @@
     <h1>Home</h1>
     <course></course>
 
-    <router-link to="/chapter" class="nav-item">
-      Go to Chapter
+    <router-link to="/chapter/13" class="nav-item">
+      Go to Chapter13
     </router-link>
   </div>
 </template>

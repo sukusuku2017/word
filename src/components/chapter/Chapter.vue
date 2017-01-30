@@ -17,7 +17,22 @@
 </template>
 
 <script>
+import * as types from '../../store/types'
+
 export default {
+
+  // data() {
+  //   return this.$store.word
+  // }
+
+  mounted() {
+    let chapter_num = this.$route.params.chapter_num
+
+    this.$store.dispatch({
+      type: types.FETCH_WORD,
+      chapter_num
+    })
+  }
 }
 </script>
 
