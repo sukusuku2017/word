@@ -1,13 +1,13 @@
 import { set } from 'vue'
-import word from '../../api/word.js'
-import * as types from '../types'
+import WordAPI from 'api/word'
+import * as types from 'store/types'
 
 const wordsModule = {
   state: {
     currentChapter: '',
     chapters: {
       /*
-      chapter_num: {
+      chapter_id: {
         chapter: 'ch13',
         content: []
       }
@@ -24,22 +24,22 @@ const wordsModule = {
   },
 
   actions: {
-    [types.FETCH_WORD] (context, { chapter_num }) {
+    [types.FETCH_WORD] (context, { chapter_id }) {
       // console.log('FETCH_WORD')
-      word.getList({ chapter_num })
+      WordAPI.getList({ chapter_id })
         .then(words => {
-          context.commit(types.RECEIVE_WORDS, { chapter_num, words })
+          context.commit(types.RECEIVE_WORDS, { chapter_id, words })
         })
     }
   },
 
   mutations: {
-    [types.SWITCH_CHAPTER] (state, { chapter_num }) {
+    [types.SWITCH_CHAPTER] (state, { chapter_id }) {
       // console.log('SWITCH_CHAPTER')
-      state.currentChapter = chapter_num
+      state.currentChapter = chapter_id
     },
-    [types.RECEIVE_WORDS] (state, { chapter_num, words }) {
-      set(state.chapters, chapter_num, words)
+    [types.RECEIVE_WORDS] (state, { chapter_id, words }) {
+      set(state.chapters, chapter_id, words)
     }
   }
 }

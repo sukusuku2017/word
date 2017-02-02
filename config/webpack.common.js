@@ -9,6 +9,16 @@ module.exports = {
     vendor: './src/vendor.js'
   },
 
+  resolve: {
+    alias: {
+      vue$: 'vue/dist/vue.common.js',
+      api:        path.resolve(__dirname, '../src/api/'),
+      components: path.resolve(__dirname, '../src/components/'),
+      store:      path.resolve(__dirname, '../src/store/')
+    },
+    extensions: ['.js', '.json']
+  },
+
   module: {
     rules: [
       {
@@ -32,12 +42,6 @@ module.exports = {
         }
       }
     ]
-  },
-
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.common.js'
-    }
   },
 
   plugins: [
