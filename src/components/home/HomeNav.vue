@@ -10,7 +10,7 @@
         <router-link to="/" class="nav-item">
           Home
         </router-link>
-        <router-link to="/course" class="nav-item">
+        <router-link to="/course/first" class="nav-item">
           Course
         </router-link>
       </div>

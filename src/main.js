@@ -5,7 +5,7 @@ import Vuex from 'vuex'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Course from './components/Course.vue'
-import Chapter from './components/chapter/Chapter.vue'
+import Word from './components/Word.vue'
 import App from './components/App.vue'
 
 import store from './store'
@@ -14,9 +14,9 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/course', component: Course },
-  { path: '/about', component: About },
-  { path: '/chapter/:chapter_num', component: Chapter }
+  { path: '/course/:course_ordinal', component: Course },
+  { path: '/word/:chapter_id', component: Word },
+  { path: '/about', component: About }
 ]
 
 const router = new VueRouter({

@@ -25,7 +25,7 @@ const wordsModule = {
 
   actions: {
     [types.FETCH_WORD] (context, { chapter_num }) {
-      console.log('FETCH_WORD');
+      // console.log('FETCH_WORD')
       word.getList({ chapter_num })
         .then(words => {
           context.commit(types.RECEIVE_WORDS, { chapter_num, words })
@@ -35,7 +35,7 @@ const wordsModule = {
 
   mutations: {
     [types.SWITCH_CHAPTER] (state, { chapter_num }) {
-      console.log('SWITCH_CHAPTER');
+      // console.log('SWITCH_CHAPTER')
       state.currentChapter = chapter_num
     },
     [types.RECEIVE_WORDS] (state, { chapter_num, words }) {

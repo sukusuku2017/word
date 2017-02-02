@@ -23,10 +23,10 @@
             </audio>
           </div>
           <p class="panel-tabs is-medium">
-            <a v-for="(val, key) in viewModes"
-                :class="{ 'is-active': visibility === key }"
-                @click="visibility = key">
-              {{ val }}
+            <a v-for="view in viewModes"
+                :class="{ 'is-active': visibility === view.code }"
+                @click="visibility = view.code">
+              {{ view.text }}
             </a>
           </p>
           <word v-for="word in currentWordarr"
@@ -45,11 +45,11 @@ import { mapState, mapGetters } from 'vuex'
 import * as types from '../../store/types'
 import Word from './Word.vue'
 
-const viewModes = {
-  ja: '日本語',
-  all: '全部',
-  ko: '韓国語'
-}
+const viewModes = [
+  { code: 'ja',  text: '日本語' },
+  { code: 'all', text: '全部'   },
+  { code: 'ko',  text: '韓国語' }
+]
 
 export default {
 
@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       visibility: 'all',
-      viewModes: viewModes
+      viewModes
     }
   },
 
@@ -82,20 +82,19 @@ export default {
 
   methods: {
     fetchData() {
-      console.log('fetchData');
-      let chapter_num = this.$route.params.chapter_num
+      // console.log('fetchData')
+      let ch_num = this.$route.params.ch_num
 
       this.$store.commit({
         type: types.SWITCH_CHAPTER,
-        chapter_num
+        ch_num
       })
 
-      console.log('fetchData midding');
-
+      // console.log('fetchData midding')
       if (!this.$store.getters.currentWords) {
         this.$store.dispatch({
           type: types.FETCH_WORD,
-          chapter_num
+          ch_num
         })
       }
     }

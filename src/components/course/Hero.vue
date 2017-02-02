@@ -13,7 +13,7 @@
             <router-link to="/" class="nav-item">
               Home
             </router-link>
-            <router-link to="/course" class="nav-item is-active">
+            <router-link to="/course/first" class="nav-item is-active">
               Course
             </router-link>
           </div>
@@ -35,13 +35,15 @@
 
     <!-- Hero footer: will stick at the bottom -->
     <div class="hero-foot">
-      <nav class="tabs">
+      <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
           <ul>
-            <li class="is-active"><a>1코스</a></li>
-            <li><a>2코스</a></li>
-            <li><a>3코스</a></li>
-            <li><a>4코스</a></li>
+            <li v-for="course in courseData"
+                :class="{ 'is-active': course_ordinal === course.code }">
+              <router-link :to="`/course/${course.code}`">
+                {{ course.text }}
+              </router-link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -50,7 +52,22 @@
 </template>
 
 <script>
+const courseData = [
+  { code: 'first',  text: '1코스' },
+  { code: 'second', text: '2코스' },
+  { code: 'third',  text: '3코스' },
+  { code: 'fourth', text: '4코스' }
+]
+
 export default {
+
+  data() {
+    return {
+      courseData
+    }
+  },
+
+  props: ['course_ordinal']
 }
 </script>
 
