@@ -1,19 +1,41 @@
 <template lang="html">
   <div class="container">
-    <nav class="panel">
-      <p class="panel-heading">
-        {{ currentChapter }}과
-      </p>
-      <p class="panel-tabs">
-        <a v-for="(val, key) in viewModes"
-            :class="{ 'is-active': visibility === key }"
-            @click="visibility = key">
-          {{ val }}
-        </a>
-      </p>
-      <word v-for="word in currentWordarr" :word="word">
-      </word>
-    </nav>
+    <div class="columns">
+      <div class="column is-10 is-offset-1 is-6-desktop is-offset-3-desktop">
+        <nav class="panel">
+          <p class="panel-heading">
+            <nav class="level">
+              <div class="level-left">
+                <div class="">
+                  {{ currentChapter }} 과
+                </div>
+              </div>
+              <div class="level-right">
+                <div class="">
+                  {{ currentWordarr.length }} 단어
+                </div>
+              </div>
+            </nav>
+          </p>
+          <div class="panel-block">
+            <audio controls="controls" preload="metadata">
+              <source src="/mp3/Track13.mp3" type="audio/mp3">
+            </audio>
+          </div>
+          <p class="panel-tabs is-medium">
+            <a v-for="(val, key) in viewModes"
+                :class="{ 'is-active': visibility === key }"
+                @click="visibility = key">
+              {{ val }}
+            </a>
+          </p>
+          <word v-for="word in currentWordarr"
+              :word="word"
+              :visibility="visibility">
+          </word>
+        </nav>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,9 +46,9 @@ import * as types from '../../store/types'
 import Word from './Word.vue'
 
 const viewModes = {
-  all: '전체',
-  jap: '일본어',
-  kor: '한국어'
+  ja: '日本語',
+  all: '全部',
+  ko: '韓国語'
 }
 
 export default {
@@ -82,4 +104,10 @@ export default {
 </script>
 
 <style lang="css">
+.panel-tabs {
+  font-size: 1.25em;
+}
+.panel-block audio {
+  height: 32px;
+}
 </style>
