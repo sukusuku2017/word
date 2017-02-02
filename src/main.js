@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 
 import Home from './components/Home.vue'
 import About from './components/About.vue'
+import Course from './components/Course.vue'
 import Chapter from './components/chapter/Chapter.vue'
 import App from './components/App.vue'
 
@@ -12,7 +13,8 @@ import store from './store'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/home', component: Home },
+  { path: '/', component: Home },
+  { path: '/course', component: Course },
   { path: '/about', component: About },
   { path: '/chapter/:chapter_num', component: Chapter }
 ]

@@ -1,21 +1,15 @@
 <template lang="html">
   <div class="home container">
-    <h1>Home</h1>
-    <course></course>
-
-    <router-link to="/chapter/13" class="nav-item">
-      Go to Chapter13
-    </router-link>
+    <home-nav></home-nav>
   </div>
 </template>
 
 <script>
-import Course from './Course.vue'
+import HomeNav from './home/HomeNav.vue'
 
 export default {
-  components: {
-    Course
-  }
+
+  components: { HomeNav }
 }
 </script>
 
