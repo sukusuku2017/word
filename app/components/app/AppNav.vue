@@ -7,10 +7,14 @@
         </router-link>
       </div>
       <div class="nav-right nav-menu">
-        <router-link to="/" class="nav-item">
+        <router-link class="nav-item"
+            to="/"
+            active-class="is-active" exact>
           Home
         </router-link>
-        <router-link to="/course/first" class="nav-item">
+        <router-link class="nav-item"
+            to="/course/first"
+            active-class="is-active">
           Course
         </router-link>
       </div>

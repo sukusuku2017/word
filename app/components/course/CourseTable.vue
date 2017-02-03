@@ -19,8 +19,8 @@
         </td>
         <td>{{ record.ud }}</td>
       </tr>
-    <tbody>
-  <table>
+    </tbody>
+  </table>
 </template>
 
 <script>
