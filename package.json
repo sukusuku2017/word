@@ -6,7 +6,7 @@
   "author": "GimYoungPhil <youngphil.gim@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "develop": "export NODE_ENV=development && webpack-dev-server --config ./config/webpack.develop.js",
+    "develop": "webpack-dev-server --config ./config/webpack.develop.js",
     "product": "export NODE_ENV=product && webpack --config ./config/webpack.product.js",
     "preproduct": "rimraf dist",
     "server": "cd dist && python -m SimpleHTTPServer 8000"

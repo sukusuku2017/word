@@ -5,16 +5,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
 
   entry: {
-    app: './src/main.js',
-    vendor: './src/vendor.js'
+    app: './app/main.js',
+    vendor: './app/vendor.js'
   },
 
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.common.js',
-      api:        path.resolve(__dirname, '../src/api/'),
-      components: path.resolve(__dirname, '../src/components/'),
-      store:      path.resolve(__dirname, '../src/store/')
+      api: path.resolve(__dirname, '../app/api'),
+      components: path.resolve(__dirname, '../app/components'),
+      store: path.resolve(__dirname, '../app/store')
     },
     extensions: ['.js', '.json']
   },
@@ -50,7 +50,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'app/index.html'
     })
   ]
 }
