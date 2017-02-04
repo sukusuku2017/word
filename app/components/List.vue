@@ -30,7 +30,7 @@
             </p>
             <word v-for="word in currentWordarr"
                 :word="word"
-                :visibility="visibility">
+                :panel-visibility="visibility">
             </word>
           </nav>
         </div>
@@ -82,7 +82,6 @@ export default {
 
   methods: {
     fetchData() {
-      // console.log('fetchData')
       let chapter_id = this.$route.params.chapter_id
 
       this.$store.commit({
@@ -90,7 +89,6 @@ export default {
         chapter_id
       })
 
-      // console.log('fetchData midding')
       if (!this.$store.getters.currentWords) {
         this.$store.dispatch({
           type: types.FETCH_WORD,

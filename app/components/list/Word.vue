@@ -13,7 +13,7 @@
           </ruby>
           <button class="button is-primary is-outlined"
               v-show="visibility === 'ko'"
-              @click="showAll">
+              @click="changeVisibility('all')">
             表示
           </button>
         </div>
@@ -25,7 +25,7 @@
           </p>
           <button class="button is-primary is-outlined"
               v-show="visibility === 'ja'"
-              @click="showAll">
+              @click="changeVisibility('all')">
             표시
           </button>
         </div>
@@ -36,11 +36,21 @@
 <script>
 export default {
 
-  props: ['word', 'visibility'],
+  props: ['word', 'panelVisibility'],
+
+  data() {
+    return {
+      visibility: this.panelVisibility
+    }
+  },
+
+  watch: {
+    'panelVisibility': 'changeVisibility'
+  },
 
   methods: {
-    showAll() {
-      this.visibility = 'all'
+    changeVisibility(newValue) {
+      this.visibility = newValue || 'all'
     }
   }
 }
