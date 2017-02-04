@@ -3,7 +3,7 @@
     <nav class="nav">
       <div class="nav-left">
         <router-link to="/" class="nav-item">
-          すくすく
+          <img src="./logo.png" alt="">
         </router-link>
       </div>
       <div class="nav-center">
