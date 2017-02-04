@@ -1,10 +1,10 @@
 <template lang="html">
   <div>
     <hero :course_ordinal="course_ordinal"></hero>
-    <section>
+    <section class="section">
       <div class="container">
-        <div class="columns is-mobile">
-          <div class="columns is-6">
+        <div class="columns">
+          <div class="column is-6 is-offset-3">
             <course-table :course_ordinal="course_ordinal"></course-table>
           </div>
         </div>

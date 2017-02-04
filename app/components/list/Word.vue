@@ -1,8 +1,8 @@
 <template lang="html">
-  <div class="panel-block" style="display: block;">
-    <div class="level is-flex-mobile">
+  <div class="panel-block panel-word">
+    <nav class="level is-mobile">
         <div class="level-left">
-          <ruby class="title is-2"
+          <ruby class=""
               v-show="visibility !== 'ko'">
             <template v-for="ch in word.characters">
               {{ ch.base }}
@@ -17,8 +17,9 @@
             表示
           </button>
         </div>
+
         <div class="level-right">
-          <p class="title is-3"
+          <p class="" style=""
               v-show="visibility !== 'ja'">
             {{ word.mean }}
           </p>
@@ -28,7 +29,7 @@
             표시
           </button>
         </div>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -46,7 +47,16 @@ export default {
 </script>
 
 <style lang="css">
+.panel-word {
+  font-size: 1.25rem;
+  display: block;
+}
+
 .level {
-  min-height: 7rem;
+  min-height: 3rem;
+}
+
+.panel-word .level-right {
+  margin-top: 0;
 }
 </style>

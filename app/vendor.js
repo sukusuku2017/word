@@ -4,5 +4,3 @@ import Vuex from 'vuex'
 
 import axios from 'axios'
 import 'bulma/css/bulma.css'
-
-// Vue.use(VueRouter)

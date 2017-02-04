@@ -1,42 +1,42 @@
 <template lang="html">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-10 is-offset-1 is-6-desktop is-offset-3-desktop">
-        <nav class="panel">
-          <p class="panel-heading">
-            <nav class="level">
-              <div class="level-left">
-                <div class="">
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-6 is-offset-3">
+          <nav class="panel">
+            <div class="panel-heading">
+              <div class="is-clearfix">
+                <div class="is-pulled-left">
                   {{ currentChapter }} 과
                 </div>
-              </div>
-              <div class="level-right">
-                <div class="">
-                  {{ currentWordarr.length }} 단어
+                <div class="is-pulled-right">
+                  <span class="tag is-white is-medium">
+                    {{ currentWordarr.length }} 단어
+                  </span>
                 </div>
               </div>
-            </nav>
-          </p>
-          <div class="panel-block">
-            <audio controls="controls" preload="metadata">
-              <source src="/mp3/Track13.mp3" type="audio/mp3">
-            </audio>
-          </div>
-          <p class="panel-tabs is-medium">
-            <a v-for="view in viewModes"
-                :class="{ 'is-active': visibility === view.code }"
-                @click="visibility = view.code">
-              {{ view.text }}
-            </a>
-          </p>
-          <word v-for="word in currentWordarr"
-              :word="word"
-              :visibility="visibility">
-          </word>
-        </nav>
+            </div>
+            <div class="panel-block panel-audio">
+              <audio controls="controls" preload="none">
+                <source src="/mp3/Track13.mp3" type="audio/mp3">
+              </audio>
+            </div>
+            <p class="panel-tabs is-medium">
+              <a v-for="view in viewModes"
+                  :class="{ 'is-active': visibility === view.code }"
+                  @click="visibility = view.code">
+                {{ view.text }}
+              </a>
+            </p>
+            <word v-for="word in currentWordarr"
+                :word="word"
+                :visibility="visibility">
+            </word>
+          </nav>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -106,7 +106,8 @@ export default {
 .panel-tabs {
   font-size: 1.25em;
 }
-.panel-block audio {
-  height: 32px;
+
+.panel-audio audio {
+  height: 46px;
 }
 </style>

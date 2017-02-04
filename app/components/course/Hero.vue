@@ -6,7 +6,7 @@
           すくすく　日本語
         </h1>
         <h2 class="subtitle">
-          단어장
+          たんご
         </h2>
       </div>
     </div>

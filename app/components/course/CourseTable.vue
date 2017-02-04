@@ -3,9 +3,9 @@
     <thead>
       <tr>
         <th>과정</th>
-        <th><abbr title="">문장</abbr></th>
-        <th><abbr title="">단어</abbr></th>
-        <th><abbr title="">업데이트</abbr></th>
+        <th>문장</th>
+        <th>단어</th>
+        <th>업데이트</th>
       </tr>
     </thead>
     <tbody>
