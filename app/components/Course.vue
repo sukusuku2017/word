@@ -5,7 +5,7 @@
       <div class="container">
         <div class="columns">
           <div class="column is-6 is-offset-3">
-            <course-table :course_ordinal="course_ordinal"></course-table>
+            <app-table :course_ordinal="course_ordinal"></app-table>
           </div>
         </div>
       </div>
@@ -15,11 +15,11 @@
 
 <script>
 import Hero from './course/Hero.vue'
-import CourseTable from './course/CourseTable.vue'
+import AppTable from './course/AppTable.vue'
 
 export default {
 
-  components: { Hero, CourseTable },
+  components: { Hero, AppTable },
 
   data() {
     return {

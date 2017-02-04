@@ -13,8 +13,12 @@
         <th>{{ record.ch }} 과</th>
         <td>{{ record.st }} 문장</td>
         <td>
+          {{ record.wd }} 단어
           <router-link :to="'/list/' + record.ch ">
-            {{ record.wd }} 단어
+            list
+          </router-link>
+          <router-link :to="'/card/' + record.ch ">
+            card
           </router-link>
         </td>
         <td>{{ record.ud }}</td>

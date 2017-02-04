@@ -11,7 +11,7 @@
                 </div>
                 <div class="is-pulled-right">
                   <span class="tag is-white is-medium">
-                    {{ currentWordarr.length }} 단어
+                    {{ currentWords.length }} 단어
                   </span>
                 </div>
               </div>
@@ -28,7 +28,7 @@
                 {{ view.text }}
               </a>
             </p>
-            <word v-for="word in currentWordarr"
+            <word v-for="word in currentWords"
                 :word="word"
                 :panel-visibility="visibility">
             </word>
@@ -66,7 +66,7 @@ export default {
     currentChapter() {
       return this.$store.state.words.currentChapter
     },
-    currentWordarr() {
+    currentWords() {
       let currentWords = this.$store.getters.currentWords
       return currentWords ? currentWords.content : []
     }

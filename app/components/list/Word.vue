@@ -2,9 +2,14 @@
   <div class="panel-block panel-word">
     <nav class="level is-mobile">
         <div class="level-left">
-          <ruby class=""
-              v-show="visibility !== 'ko'">
-            <template v-for="ch in word.characters">
+          <ruby v-show="visibility !== 'ko'">
+            <template v-if="word.base">
+              {{ word.base }}
+              <template v-if="word.ruby">
+                <rp>(</rp><rt>{{ word.ruby }}</rt><rp>)</rp>
+              </template>
+            </template>
+            <template v-else v-for="ch in word.characters">
               {{ ch.base }}
               <rp v-if="ch.ruby">(</rp>
               <rt>{{ ch.ruby }}</rt>
@@ -19,8 +24,7 @@
         </div>
 
         <div class="level-right">
-          <p class="" style=""
-              v-show="visibility !== 'ja'">
+          <p v-show="visibility !== 'ja'">
             {{ word.mean }}
           </p>
           <button class="button is-primary is-outlined"
@@ -62,7 +66,7 @@ export default {
   display: block;
 }
 
-.level {
+.panel-word .level {
   min-height: 3rem;
 }
 

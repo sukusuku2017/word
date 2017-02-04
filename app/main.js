@@ -6,6 +6,7 @@ import Home from 'components/Home.vue'
 import About from 'components/About.vue'
 import Course from 'components/Course.vue'
 import List from 'components/List.vue'
+import Card from 'components/Card.vue'
 import App from 'components/App.vue'
 
 import store from 'store'
@@ -16,6 +17,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/course/:course_ordinal', component: Course },
   { path: '/list/:chapter_id', component: List },
+  { path: '/card/:chapter_id', component: Card },
   { path: '/about', component: About }
 ]
 
