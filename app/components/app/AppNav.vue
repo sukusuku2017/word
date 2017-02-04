@@ -6,16 +6,16 @@
           すくすく
         </router-link>
       </div>
-      <div class="nav-right nav-menu">
+      <div class="nav-center">
         <router-link class="nav-item"
             to="/"
             active-class="is-active" exact>
-          Home
+          ホーム
         </router-link>
         <router-link class="nav-item"
             to="/course/first"
             active-class="is-active">
-          Course
+          コース
         </router-link>
       </div>
     </nav>
