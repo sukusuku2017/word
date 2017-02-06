@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+/*@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);*/
+
+/*body {
+  font-family: 'Noto Sans KR', serif;
+  font-weight: 200;
+}*/
+
+.wf-notosansjapanese {
+  font-family: "Noto Sans Japanese";
+}
+
+.wf-notosanskr {
+  /*font-family: "Noto Sans KR";*/
+}

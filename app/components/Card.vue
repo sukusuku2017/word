@@ -5,7 +5,7 @@
         {{ currentChapter }}
       </h1>
       <div class="columns is-multiline">
-        <div class="column is-3"
+        <div class="column is-6-tablet is-4-desktop"
             v-for="word in currentWords">
           <app-card :word="word"></app-card>
         </div>

@@ -10,8 +10,8 @@
         </span>
       </a>
     </header>
-    <div class="card-content has-text-centered">
-      <ruby>
+    <div class="card-content has-text-centered is-warning">
+      <ruby class="wf-notosansjapanese">
         <template v-if="word.base">
           {{ word.base }}
           <template v-if="word.ruby">
@@ -34,7 +34,9 @@
       </template>
       <template v-else v-for="ch in word.characters">
         <div v-if="ch.mean" class="card-footer-item">
-          {{ ch.base }} {{ ch.mean }}
+          <span class="wf-notosansjapanese">{{ ch.base }}</span>
+          &nbsp;
+          <span>{{ ch.mean }}</span>
         </div>
       </template>
     </footer>
@@ -50,7 +52,7 @@ export default {
 
 <style lang="css">
 .card-word .card-content {
-  font-size: 1.5rem;
+  font-size: 3rem;
   min-height: 3rem;
 }
 </style>

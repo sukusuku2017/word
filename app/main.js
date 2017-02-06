@@ -11,6 +11,8 @@ import App from 'components/App.vue'
 
 import store from 'store'
 
+import 'template/style.css'
+
 Vue.use(VueRouter)
 
 const routes = [

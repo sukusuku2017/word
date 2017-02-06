@@ -10,10 +10,10 @@
     </thead>
     <tbody>
       <tr v-for="record in currentCourse">
-        <th>{{ record.ch }} 과</th>
-        <td>{{ record.st }} 문장</td>
+        <th>{{ record.ch }}</th>
+        <td>{{ record.st }}</td>
         <td>
-          {{ record.wd }} 단어
+          {{ record.wd }}:
           <router-link :to="'/list/' + record.ch ">
             list
           </router-link>

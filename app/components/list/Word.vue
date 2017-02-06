@@ -2,7 +2,8 @@
   <div class="panel-block panel-word">
     <nav class="level is-mobile">
         <div class="level-left">
-          <ruby v-show="visibility !== 'ko'">
+          <ruby class="wf-notosansjapanese"
+              v-show="visibility !== 'ko'">
             <template v-if="word.base">
               {{ word.base }}
               <template v-if="word.ruby">
@@ -62,12 +63,12 @@ export default {
 
 <style lang="css">
 .panel-word {
-  font-size: 1.25rem;
+  font-size: 2rem;
   display: block;
 }
 
 .panel-word .level {
-  min-height: 3rem;
+  min-height: 4.5rem;
 }
 
 .panel-word .level-right {
