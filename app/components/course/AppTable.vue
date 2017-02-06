@@ -13,12 +13,14 @@
         <th>{{ record.ch }}</th>
         <td>{{ record.st }}</td>
         <td>
-          {{ record.wd }}:
-          <router-link :to="'/list/' + record.ch ">
-            list
+          {{ record.wd }}
+          <router-link :to="`/list/${record.ch}`"
+              class="button is-primary is-outlined">
+            L
           </router-link>
-          <router-link :to="'/card/' + record.ch ">
-            card
+          <router-link :to="`/card/${record.ch}`"
+              class="button is-primary is-outlined">
+            C
           </router-link>
         </td>
         <td>{{ record.ud }}</td>
