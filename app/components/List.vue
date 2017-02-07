@@ -18,7 +18,7 @@
             </div>
             <div class="panel-block panel-audio">
               <audio controls="controls" preload="none">
-                <source src="/mp3/Track13.mp3" type="audio/mp3">
+                <source :src="`/mp3/wd${currentChapter}.mp3`" type="audio/mp3">
               </audio>
             </div>
             <p class="panel-tabs is-medium">
