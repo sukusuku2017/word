@@ -1,5 +1,5 @@
 import { set } from 'vue'
-import WordAPI from 'api/word'
+import API from 'api'
 import * as types from 'store/types'
 
 const wordsModule = {
@@ -25,8 +25,7 @@ const wordsModule = {
 
   actions: {
     [types.FETCH_WORD] (context, { chapter_id }) {
-      // console.log('FETCH_WORD')
-      WordAPI.getList({ chapter_id })
+      API.getWord({ chapter_id })
         .then(words => {
           context.commit(types.RECEIVE_WORDS, { chapter_id, words })
         })
@@ -35,7 +34,6 @@ const wordsModule = {
 
   mutations: {
     [types.SWITCH_CHAPTER] (state, { chapter_id }) {
-      // console.log('SWITCH_CHAPTER')
       state.currentChapter = chapter_id
     },
     [types.RECEIVE_WORDS] (state, { chapter_id, words }) {
