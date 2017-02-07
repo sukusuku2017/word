@@ -3,36 +3,9 @@
     <div class="container">
       <div class="columns">
         <div class="column is-6 is-offset-3">
-          <nav class="panel">
-            <div class="panel-heading">
-              <div class="is-clearfix">
-                <div class="is-pulled-left">
-                  {{ currentChapter }} 과
-                </div>
-                <div class="is-pulled-right">
-                  <span class="tag is-white is-medium">
-                    {{ currentWords.length }} 단어
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="panel-block panel-audio">
-              <audio controls="controls" preload="none">
-                <source :src="`/mp3/wd${currentChapter}.mp3`" type="audio/mp3">
-              </audio>
-            </div>
-            <p class="panel-tabs is-medium">
-              <a v-for="view in viewModes"
-                  :class="{ 'is-active': visibility === view.code }"
-                  @click="visibility = view.code">
-                {{ view.text }}
-              </a>
-            </p>
-            <word v-for="word in currentWords"
-                :word="word"
-                :panel-visibility="visibility">
-            </word>
-          </nav>
+          <panel :currentChapter="currentChapter"
+              :currentWords="currentWords">
+          </panel>
         </div>
       </div>
     </div>
@@ -43,24 +16,11 @@
 import { mapState, mapGetters } from 'vuex'
 
 import * as types from 'store/types'
-import Word from './list/Word.vue'
-
-const viewModes = [
-  { code: 'ja',  text: '日本語' },
-  { code: 'all', text: '全部'   },
-  { code: 'ko',  text: '韓国語' }
-]
+import Panel from './list/Panel.vue'
 
 export default {
 
-  components: { Word },
-
-  data() {
-    return {
-      visibility: 'all',
-      viewModes
-    }
-  },
+  components: { Panel },
 
   computed: {
     currentChapter() {
@@ -101,11 +61,4 @@ export default {
 </script>
 
 <style lang="css">
-.panel-tabs {
-  font-size: 1.25em;
-}
-
-.panel-audio audio {
-  height: 46px;
-}
 </style>

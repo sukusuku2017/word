@@ -31,7 +31,7 @@
           <button class="button is-primary is-outlined"
               v-show="visibility === 'ja'"
               @click="changeVisibility('all')">
-            표시
+            表示
           </button>
         </div>
     </nav>
