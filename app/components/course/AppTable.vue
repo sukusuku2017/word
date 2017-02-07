@@ -40,17 +40,10 @@
 </template>
 
 <script>
-import ct from './ct.json'
-
 export default {
 
-  props: ['course_ordinal'],
+  props: ['currentCourse']
 
-  computed: {
-    currentCourse() {
-      return ct[this.course_ordinal]
-    }
-  }
 }
 </script>
 

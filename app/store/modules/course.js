@@ -4,7 +4,7 @@ import * as types from 'store/types'
 
 const courseModule = {
   state: {
-    course: [
+    content: [
       /*
       {
         "code": "first",
@@ -28,7 +28,7 @@ const courseModule = {
 
   mutations: {
     [types.RECEIVE_COURSE] (state, { course }) {
-      set(state.course, course)
+      set(state, 'content', course)
     }
   }
 }

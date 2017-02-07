@@ -5,7 +5,7 @@
       <div class="container">
         <div class="columns">
           <div class="column is-6 is-offset-3">
-            <app-table :course_ordinal="course_ordinal"></app-table>
+            <app-table :currentCourse="currentCourse"></app-table>
           </div>
         </div>
       </div>
@@ -14,6 +14,10 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import _ from 'lodash'
+
+import * as types from 'store/types'
 import Hero from './course/Hero.vue'
 import AppTable from './course/AppTable.vue'
 
@@ -23,9 +27,18 @@ export default {
 
   data() {
     return {
-      course_ordinal: 'first'
+      'course_ordinal': 'first'
     }
   },
+
+  computed: mapState({
+    content: state => state.course.content,
+
+    currentCourse(state) {
+      let course = _.find(state.course.content, { code: this.course_ordinal })
+      return course ? course.content : []
+    }
+  }),
 
   created() {
     this.changeOrdinal()
@@ -38,11 +51,16 @@ export default {
   methods: {
     changeOrdinal() {
       this.course_ordinal = this.$route.params.course_ordinal
+
+      if (!this.$store.state.course.content.length) {
+        this.$store.dispatch({
+          type: types.FETCH_COURSE
+        })
+      }
     }
   }
 }
 </script>
 
 <style lang="css">
-
 </style>
