@@ -14,7 +14,7 @@
         </p>
         <p>
           <em>Copyright © 2017</em>
-          <a href="https://gimyoungphil.github.io/">Gim YoungPhil</a>
+          <a href="https://github.com/GimYoungPhil">Gim YoungPhil</a>
         </p>
       </div>
     </div>

@@ -5,6 +5,8 @@
         <th>チャプター</th>
         <th>センテンス</th>
         <th>ワード</th>
+        <th>リスト</th>
+        <th>カード</th>
         <th>アップデート</th>
       </tr>
     </thead>
@@ -12,26 +14,33 @@
       <tr v-for="record in currentCourse">
         <th>{{ record.ch }}</th>
         <td>{{ record.st }}</td>
-        <td>
-          {{ record.wd }}
-          <template v-if="record.wd">
+        <td>{{ record.wd }}</td>
+        <template v-if="record.wd">
+          <td>
             <router-link :to="`/list/${record.ch}`"
-                class="button is-primary is-outlined">
+                class="button is-primary">
               L
             </router-link>
+          </td>
+          <td>
             <router-link :to="`/card/${record.ch}`"
-                class="button is-primary is-outlined">
+                class="button is-primary">
               C
             </router-link>
-          </template>
-          <template v-else>
+          </td>
+        </template>
+        <template v-else>
+          <td>
             <button class="button is-primary is-outlined is-disabled">
               L
             </button>
+          </td>
+          <td>
             <button class="button is-primary is-outlined is-disabled">
               C
             </button>
-          </template>
+          </td>
+        </template>
         </td>
         <td>{{ record.ud }}</td>
       </tr>

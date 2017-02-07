@@ -3,10 +3,10 @@
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title">
-          すくすく 日本語
+          すくすく
         </h1>
         <h2 class="subtitle">
-          たんご
+          日本語
         </h2>
       </div>
     </div>
