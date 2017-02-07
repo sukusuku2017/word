@@ -9,6 +9,7 @@
     "develop": "webpack-dev-server --config ./config/webpack.develop.js",
     "product": "export NODE_ENV=product && webpack --config ./config/webpack.product.js",
     "preproduct": "rimraf dist",
+    "postproduct": "cp -r ./data/api ./dist/api",
     "server": "cd dist && python -m SimpleHTTPServer 8000"
   },
   "devDependencies": {
