@@ -3,7 +3,10 @@
     <div class="container">
       <div class="columns">
         <div class="column has-text-centered">
-          <h1 class="title is-1">リスト</h1>
+          <h1 class="title is-1">
+            <button class="button is-primary is-large">L</button>
+            リスト
+          </h1>
         </div>
         <div class="column">
           <panel :currentChapter="currentChapter"
@@ -24,7 +27,7 @@ export default {
 
   data() {
     return {
-      currentChapter: '00',
+      currentChapter: '04',
       currentWords: [
         {
           "characters": [

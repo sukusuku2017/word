@@ -1,12 +1,12 @@
 <template lang="html">
-  <section class="hero is-large">
+  <section class="hero is-medium">
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title">
-          すくすく
+          すくすく 日本語
         </h1>
         <h2 class="subtitle">
-          日本語
+          たんご
         </h2>
       </div>
     </div>

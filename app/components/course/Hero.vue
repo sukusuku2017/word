@@ -30,10 +30,10 @@
 
 <script>
 const courseData = [
-  { code: 'first',  text: '1코스' },
-  { code: 'second', text: '2코스' },
-  { code: 'third',  text: '3코스' },
-  { code: 'fourth', text: '4코스' }
+  { code: 'first',  text: '1コース' },
+  { code: 'second', text: '2コース' },
+  { code: 'third',  text: '3コース' },
+  { code: 'fourth', text: '4コース' }
 ]
 
 export default {

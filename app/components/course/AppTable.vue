@@ -2,10 +2,10 @@
   <table class="table">
     <thead>
       <tr>
-        <th>과정</th>
-        <th>문장</th>
-        <th>단어</th>
-        <th>업데이트</th>
+        <th>チャプター</th>
+        <th>センテンス</th>
+        <th>ワード</th>
+        <th>アップデート</th>
       </tr>
     </thead>
     <tbody>

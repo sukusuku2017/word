@@ -1,15 +1,9 @@
 <template lang="html">
   <section class="section">
     <div class="container">
-      <h1>
-        {{ currentChapter }}
-      </h1>
-      <div class="columns is-multiline">
-        <div class="column is-6-tablet is-4-desktop"
-            v-for="word in currentWords">
-          <app-card :word="word"></app-card>
-        </div>
-      </div>
+      <list :currentChapter="currentChapter"
+          :currentWords="currentWords">
+      </list>
     </div>
   </section>
 </template>
@@ -18,11 +12,11 @@
 import { mapState, mapGetters } from 'vuex'
 
 import * as types from 'store/types'
-import AppCard from './card/AppCard.vue'
+import List from './card/List.vue'
 
 export default {
 
-  components: { AppCard },
+  components: { List },
 
   computed: {
     currentChapter() {
