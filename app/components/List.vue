@@ -3,9 +3,12 @@
     <div class="container">
       <div class="columns">
         <div class="column is-6 is-offset-3">
-          <panel :currentChapter="currentChapter"
-              :currentWords="currentWords">
-          </panel>
+          <template v-if="currentWords">
+            <panel :currentWords="currentWords"></panel>
+          </template>
+          <template v-else>
+            <p>loading...</p>
+          </template>
         </div>
       </div>
     </div>
@@ -23,12 +26,8 @@ export default {
   components: { Panel },
 
   computed: {
-    currentChapter() {
-      return this.$store.state.words.currentChapter
-    },
     currentWords() {
-      let currentWords = this.$store.getters.currentWords
-      return currentWords ? currentWords.content : []
+      return this.$store.getters.currentWords
     }
   },
 

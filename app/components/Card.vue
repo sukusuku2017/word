@@ -1,9 +1,12 @@
 <template lang="html">
   <section class="section">
     <div class="container">
-      <list :currentChapter="currentChapter"
-          :currentWords="currentWords">
-      </list>
+      <template v-if="currentWords">
+        <list :currentWords="currentWords"></list>
+      </template>
+      <template v-else>
+        <p>loading...</p>
+      </template>
     </div>
   </section>
 </template>
@@ -19,12 +22,8 @@ export default {
   components: { List },
 
   computed: {
-    currentChapter() {
-      return this.$store.state.words.currentChapter
-    },
     currentWords() {
-      let currentWords = this.$store.getters.currentWords
-      return currentWords ? currentWords.content : []
+      return this.$store.getters.currentWords
     }
   },
 

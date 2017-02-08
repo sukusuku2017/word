@@ -9,9 +9,7 @@
           </h1>
         </div>
         <div class="column">
-          <panel :currentChapter="currentChapter"
-              :currentWords="currentWords">
-          </panel>
+          <panel :currentWords="currentWords"></panel>
         </div>
       </div>
     </div>
@@ -27,61 +25,63 @@ export default {
 
   data() {
     return {
-      currentChapter: '04',
-      currentWords: [
-        {
-          "characters": [
-            {
-              "base": "暑",
-              "mean": "더울 서",
-              "ruby": "あつ"
-            },
-            {
-              "base": "い"
-            }
-          ],
-          "mean": "덥다"
-        },
-        {
-          "characters": [
-            {
-              "base": "寒",
-              "mean": "찰 한",
-              "ruby": "さむ"
-            },
-            {
-              "base": "い"
-            }
-          ],
-          "mean": "춥다"
-        },
-        {
-          "characters": [
-            {
-              "base": "高",
-              "mean": "높을 고",
-              "ruby": "たか"
-            },
-            {
-              "base": "い"
-            }
-          ],
-          "mean": "비싸다"
-        },
-        {
-          "characters": [
-            {
-              "base": "安",
-              "mean": "편안 안",
-              "ruby": "やす"
-            },
-            {
-              "base": "い"
-            }
-          ],
-          "mean": "싸다"
-        }
-      ]
+      currentWords: {
+        "chapter": "04",
+        "content": [
+          {
+            "characters": [
+              {
+                "base": "暑",
+                "mean": "더울 서",
+                "ruby": "あつ"
+              },
+              {
+                "base": "い"
+              }
+            ],
+            "mean": "덥다"
+          },
+          {
+            "characters": [
+              {
+                "base": "寒",
+                "mean": "찰 한",
+                "ruby": "さむ"
+              },
+              {
+                "base": "い"
+              }
+            ],
+            "mean": "춥다"
+          },
+          {
+            "characters": [
+              {
+                "base": "高",
+                "mean": "높을 고",
+                "ruby": "たか"
+              },
+              {
+                "base": "い"
+              }
+            ],
+            "mean": "비싸다"
+          },
+          {
+            "characters": [
+              {
+                "base": "安",
+                "mean": "편안 안",
+                "ruby": "やす"
+              },
+              {
+                "base": "い"
+              }
+            ],
+            "mean": "싸다"
+          }
+        ]
+      }
     }
   }
 }

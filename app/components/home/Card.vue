@@ -10,9 +10,7 @@
           </h1>
         </div>
       </div>
-      <list :currentChapter="currentChapter"
-          :currentWords="currentWords">
-      </list>
+      <list :currentWords="currentWords"></list>
     </div>
   </section>
 </template>
@@ -26,68 +24,70 @@ export default {
 
   data() {
     return {
-      currentChapter: '06',
-      currentWords: [
-        {
-          "characters": [
-            {
-              "base": "真",
-              "mean": "참 진",
-              "ruby": "ま"
-            },
-            {
-              "base": "面",
-              "mean": "낯 면",
-              "ruby": "じ"
-            },
-            {
-              "base": "目",
-              "mean": "눈 목",
-              "ruby": "め"
-            },
-            {
-              "base": "だ"
-            }
-          ],
-          "mean": "성실하다"
-        },
-        {
-          "characters": [
-            {
-              "base": "元",
-              "mean": "의뜸 원",
-              "ruby": "げん"
-            },
-            {
-              "base": "気",
-              "mean": "기운 기",
-              "ruby": "き"
-            },
-            {
-              "base": "だ"
-            }
-          ],
-          "mean": "건강하다"
-        },
-        {
-          "characters": [
-            {
-              "base": "丈",
-              "mean": "어른 장",
-              "ruby": "じょう"
-            },
-            {
-              "base": "夫",
-              "mean": "지아비 부",
-              "ruby": "ぶ"
-            },
-            {
-              "base": "だ"
-            }
-          ],
-          "mean": "튼튼하다"
-        }
-      ]
+      currentWords: {
+        chapter: '06',
+        content: [
+          {
+            "characters": [
+              {
+                "base": "真",
+                "mean": "참 진",
+                "ruby": "ま"
+              },
+              {
+                "base": "面",
+                "mean": "낯 면",
+                "ruby": "じ"
+              },
+              {
+                "base": "目",
+                "mean": "눈 목",
+                "ruby": "め"
+              },
+              {
+                "base": "だ"
+              }
+            ],
+            "mean": "성실하다"
+          },
+          {
+            "characters": [
+              {
+                "base": "元",
+                "mean": "의뜸 원",
+                "ruby": "げん"
+              },
+              {
+                "base": "気",
+                "mean": "기운 기",
+                "ruby": "き"
+              },
+              {
+                "base": "だ"
+              }
+            ],
+            "mean": "건강하다"
+          },
+          {
+            "characters": [
+              {
+                "base": "丈",
+                "mean": "어른 장",
+                "ruby": "じょう"
+              },
+              {
+                "base": "夫",
+                "mean": "지아비 부",
+                "ruby": "ぶ"
+              },
+              {
+                "base": "だ"
+              }
+            ],
+            "mean": "튼튼하다"
+          }
+        ]
+      }
     }
   }
 }

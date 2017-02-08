@@ -4,12 +4,14 @@ import * as types from 'store/types'
 
 const wordsModule = {
   state: {
-    currentChapter: '',
+    currentChapter: '00',
     chapters: {
       /*
       chapter_id: {
-        chapter: 'ch13',
-        content: []
+        "chapter": "04",
+        "update": "2017-02-07",
+        "author": [],
+        "content": []
       }
       */
     }
@@ -19,7 +21,7 @@ const wordsModule = {
     currentWords: state => {
       return state.currentChapter
         ? state.chapters[state.currentChapter]
-        : {}
+        : { chapter: 'loading', content: [] }
     }
   },
 
