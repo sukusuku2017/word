@@ -21,7 +21,7 @@ const wordsModule = {
     currentWords: state => {
       return state.currentChapter
         ? state.chapters[state.currentChapter]
-        : { chapter: 'loading', content: [] }
+        : {}
     }
   },
 

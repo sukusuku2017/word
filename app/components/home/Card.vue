@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       currentWords: {
-        chapter: '06',
+        chapter: '00',
         content: [
           {
             "characters": [
