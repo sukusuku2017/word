@@ -14,7 +14,7 @@
     </div>
     <div class="panel-block panel-audio">
       <audio controls="controls" preload="none">
-        <source :src="`/mp3/wd${currentWords.chapter}.mp3`" type="audio/mp3">
+        <source :src="`/mp3/words/wd${currentWords.chapter}.mp3`" type="audio/mp3">
       </audio>
     </div>
     <p class="panel-tabs is-medium">
