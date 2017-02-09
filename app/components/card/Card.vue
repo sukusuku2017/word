@@ -52,7 +52,6 @@ export default {
 
 <style lang="css">
 .card-word .card-content {
-  font-size: 3rem;
-  min-height: 3rem;
+  font-size: 2rem;
 }
 </style>
