@@ -2,21 +2,10 @@
   <div class="panel-block panel-word">
     <nav class="level is-mobile">
         <div class="level-left">
-          <ruby class="wf-notosansjapanese"
+          <ruby-word class="wf-notosansjapanese"
+              :word="word"
               v-show="visibility !== 'ko'">
-            <template v-if="word.base">
-              {{ word.base }}
-              <template v-if="word.ruby">
-                <rp>(</rp><rt>{{ word.ruby }}</rt><rp>)</rp>
-              </template>
-            </template>
-            <template v-else v-for="ch in word.characters">
-              {{ ch.base }}
-              <rp v-if="ch.ruby">(</rp>
-              <rt>{{ ch.ruby }}</rt>
-              <rp v-if="ch.ruby">)</rp>
-            </template>
-          </ruby>
+          </ruby-word>
           <button class="button is-primary is-outlined"
               v-show="visibility === 'ko'"
               @click="changeVisibility('all')">
@@ -39,7 +28,11 @@
 </template>
 
 <script>
+import RubyWord from 'components/common/RubyWord.vue'
+
 export default {
+
+  components: { RubyWord },
 
   props: ['word', 'panelVisibility'],
 

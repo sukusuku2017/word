@@ -10,21 +10,8 @@
         </span>
       </a>
     </header>
-    <div class="card-content has-text-centered is-warning">
-      <ruby class="wf-notosansjapanese">
-        <template v-if="word.base">
-          {{ word.base }}
-          <template v-if="word.ruby">
-            <rp>(</rp><rt>{{ word.ruby }}</rt><rp>)</rp>
-          </template>
-        </template>
-        <template v-else v-for="ch in word.characters">
-          {{ ch.base }}
-          <rp v-if="ch.ruby">(</rp>
-          <rt>{{ ch.ruby }}</rt>
-          <rp v-if="ch.ruby">)</rp>
-        </template>
-      </ruby>
+    <div class="card-content has-text-centered">
+      <ruby-word class="wf-notosansjapanese" :word="word"></ruby-word>
     </div>
     <footer class="card-footer">
       <template v-if="!word.characters">
@@ -44,8 +31,10 @@
 </template>
 
 <script>
-export default {
+import RubyWord from 'components/common/RubyWord.vue'
 
+export default {
+  components: { RubyWord },
   props: ['word']
 }
 </script>
