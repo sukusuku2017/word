@@ -14,12 +14,12 @@
       <ruby-word class="wf-notosansjapanese" :word="word"></ruby-word>
     </div>
     <footer class="card-footer">
-      <template v-if="!word.characters">
+      <template v-if="!items.length">
         <div class="card-footer-item">
           -
         </div>
       </template>
-      <template v-else v-for="ch in word.characters">
+      <template v-else v-for="ch in items">
         <div v-if="ch.mean" class="card-footer-item">
           <span class="wf-notosansjapanese">{{ ch.base }}</span>
           &nbsp;
@@ -31,11 +31,21 @@
 </template>
 
 <script>
+import _ from 'lodash'
 import RubyWord from 'components/common/RubyWord.vue'
 
 export default {
   components: { RubyWord },
-  props: ['word']
+  props: ['word'],
+
+  computed: {
+    items() {
+      if (this.word.items) {
+        return this.word.items
+      }
+      return _.filter(this.word.characters, 'mean')
+    }
+  }
 }
 </script>
 
