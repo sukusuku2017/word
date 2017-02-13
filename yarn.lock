@@ -3433,10 +3433,6 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-"tango@https://github.com/sukusuku2017/tango.git":
-  version "0.1.1"
-  resolved "https://github.com/sukusuku2017/tango.git#9c7c4b627cbc518c00be84b5d32aa6479ce02317"
-
 tapable@^0.2.5, tapable@~0.2.5:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.6.tgz#206be8e188860b514425375e6f1ae89bfb01fd8d"

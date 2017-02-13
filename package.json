@@ -9,7 +9,6 @@
     "develop": "webpack-dev-server --config ./config/webpack.develop.js",
     "preproduct": "rimraf dist",
     "product": "export NODE_ENV=product && webpack --config ./config/webpack.product.js",
-    "postproduct": "cp -r ./node_modules/tango/data/* ./data/test/",
     "predeploy": "cp -r ./data/* ./dist/",
     "deploy": "cd ./dist && surge ./",
     "server": "cd dist && python -m SimpleHTTPServer 8000"
@@ -37,8 +36,5 @@
     "vue": "^2.1.10",
     "vue-router": "^2.2.0",
     "vuex": "^2.1.1"
-  },
-  "peerDependencies": {
-    "tango": "https://github.com/sukusuku2017/tango.git"
   }
 }
