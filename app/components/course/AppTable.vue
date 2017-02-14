@@ -7,7 +7,6 @@
         <th>ワード</th>
         <th>リスト</th>
         <th>カード</th>
-        <th>アップデート</th>
       </tr>
     </thead>
     <tbody>
@@ -42,7 +41,6 @@
           </td>
         </template>
         </td>
-        <td>{{ record.ud }}</td>
       </tr>
     </tbody>
   </table>

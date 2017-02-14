@@ -2,6 +2,7 @@
   <div class="home">
     <hero></hero>
     <feature></feature>
+    <hr class="is-maginless">
     <list></list>
     <hr class="is-maginless">
     <card></card>
@@ -11,13 +12,12 @@
 <script>
 import Hero from './home/Hero.vue'
 import Feature from './home/Feature.vue'
+import Course from './home/Course.vue'
 import List from './home/List.vue'
 import Card from './home/Card.vue'
 
-
 export default {
-
-  components: { Hero, Feature, List, Card }
+  components: { Hero, Feature, Course, List, Card }
 }
 </script>
 
