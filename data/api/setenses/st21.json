@@ -72,7 +72,6 @@
       "mean": "어제는 비였습니다만, 외출했습니다."
     },{
       "characters": [
-        富	士	山	は	高	くて	大	変	でした	けど	、	景	色	はとても	よかったです。
         {
           "base": "富",
           "ruby": "ふ"
@@ -98,35 +97,34 @@
         {
           "base": "大",
           "ruby": "たか",
-          "bold": true
+          "color": true
         },
         {
           "base": "変",
           "ruby": "へん",
+          "color": true
+        },
+        {
+          "base": "でした",
+          "color": true
+        },
+        {
+          "base": "けど",
           "bold": true
-        },
-        {
-          "base": "でした"
-        },
-        {
-          "base": "けど"
         },
         {
           "base": "、"
         },
         {
           "base": "景",
-          "ruby": "け",
-          "color": true
+          "ruby": "け"
         },
         {
           "base": "色",
-          "ruby": "しき",
-          "color": true
+          "ruby": "しき"
         },
         {
-          "base": "はとても",
-          "color": true
+          "base": "はとても"
         },
         {
           "base": "よかったです。",
