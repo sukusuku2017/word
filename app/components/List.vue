@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 
 import * as types from 'store/types'
 import Panel from './list/Panel.vue'
@@ -25,11 +25,9 @@ export default {
 
   components: { Panel },
 
-  computed: {
-    currentWords() {
-      return this.$store.getters.currentWords
-    }
-  },
+  computed: mapGetters([
+    'currentWords'
+  ]),
 
   created() {
     this.fetchData()
@@ -44,7 +42,7 @@ export default {
       let chapter_id = this.$route.params.chapter_id
 
       this.$store.commit({
-        type: types.SWITCH_CHAPTER,
+        type: types.SWITCH_WORD,
         chapter_id
       })
 

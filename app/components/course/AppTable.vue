@@ -2,17 +2,25 @@
   <table class="table">
     <thead>
       <tr>
-        <th>チャプター</th>
+        <th>課</th>
+        <th>文章</th>
         <th>センテンス</th>
-        <th>ワード</th>
+        <th>單語</th>
         <th>リスト</th>
         <th>カード</th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="record in currentCourse">
-        <th>{{ record.ch }}</th>
+        <td>{{ record.ch }}</td>
         <td>{{ record.st }}</td>
+        <td>
+          <router-link class="button is-primary"
+              :to="`/sentence/${record.ch}`"
+              v-if="record.st">
+            S
+          </router-link>
+        </td>
         <td>{{ record.wd }}</td>
         <template v-if="record.wd">
           <td>

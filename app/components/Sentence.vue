@@ -1,8 +1,8 @@
 <template lang="html">
   <section class="section">
     <div class="container">
-      <template v-if="currentWords">
-        <list :currentWords="currentWords"></list>
+      <template v-if="currentSentences">
+        <list :currentSentences="currentSentences"></list>
       </template>
       <template v-else>
         <p>loading...</p>
@@ -15,22 +15,17 @@
 import { mapGetters } from 'vuex'
 
 import * as types from 'store/types'
-import List from './card/List.vue'
+import List from './sentence/List.vue'
 
 export default {
-
   components: { List },
 
   computed: mapGetters([
-    'currentWords'
+    'currentSentences'
   ]),
 
   created() {
     this.fetchData()
-  },
-
-  watch: {
-    '$route': 'fetchData'
   },
 
   methods: {
@@ -38,13 +33,13 @@ export default {
       let chapter_id = this.$route.params.chapter_id
 
       this.$store.commit({
-        type: types.SWITCH_WORD,
+        type: types.SWITCH_SENTENCE,
         chapter_id
       })
 
-      if (!this.$store.getters.currentWords) {
+      if (!this.$store.getters.currentSentences) {
         this.$store.dispatch({
-          type: types.FETCH_WORD,
+          type: types.FETCH_SENTENCE,
           chapter_id
         })
       }

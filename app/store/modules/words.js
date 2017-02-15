@@ -5,7 +5,7 @@ import * as types from 'store/types'
 const wordsModule = {
   state: {
     currentChapter: '00',
-    chapters: {
+    words: {
       /*
       chapter_id: {
         "chapter": "04",
@@ -18,28 +18,24 @@ const wordsModule = {
   },
 
   getters: {
-    currentWords: state => {
-      return state.currentChapter
-        ? state.chapters[state.currentChapter]
-        : {}
-    }
+    currentWords: state => state.words[state.currentChapter]
   },
 
   actions: {
     [types.FETCH_WORD] (context, { chapter_id }) {
       API.getWord({ chapter_id })
         .then(words => {
-          context.commit(types.RECEIVE_WORDS, { chapter_id, words })
+          context.commit(types.RECEIVE_WORD, { chapter_id, words })
         })
     }
   },
 
   mutations: {
-    [types.SWITCH_CHAPTER] (state, { chapter_id }) {
+    [types.SWITCH_WORD] (state, { chapter_id }) {
       state.currentChapter = chapter_id
     },
-    [types.RECEIVE_WORDS] (state, { chapter_id, words }) {
-      set(state.chapters, chapter_id, words)
+    [types.RECEIVE_WORD] (state, { chapter_id, words }) {
+      set(state.words, chapter_id, words)
     }
   }
 }
