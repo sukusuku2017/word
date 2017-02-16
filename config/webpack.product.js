@@ -9,12 +9,12 @@ module.exports = webpackMerge(commonConfig, {
 
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[name].[hash].js',
-    chunkFilename: '[id].[hash].chunk.js',
+    filename: '[name].[chunkhash].js',
     publicPath: '/'
   },
 
   plugins:[
+    new webpack.optimize.UglifyJsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     })
