@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style lang="css">
+.card-subject .card-header {
+  padding: 0.5em 0.75em;
+}
+
 .card-subject audio {
   height: 36px;
 }
