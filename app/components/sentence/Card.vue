@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="card card-sentence">
     <div class="card-content">
-      <ruby-sentence class="" :sentence="sentence"></ruby-sentence>
+      <ruby-sentence :sentence="sentence"></ruby-sentence>
     </div>
     <footer class="card-footer">
       <div class="card-footer-item">
-        {{ sentence.mean}}
+        {{ sentence.mean }}
       </div>
     </div>
   </article>

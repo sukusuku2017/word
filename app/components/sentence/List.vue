@@ -1,17 +1,24 @@
 <template lang="html">
   <div class="app-card-list">
-    <h2 class="title is-2">
-      Sentence List
-    </h2>
     <div class="columns is-multiline">
+      <div class="column is-1">
+        <span class="tag is-light is-large">
+          第 {{ currentSentences.chapter }} 課
+        </span>
+      </div>
+      <div class="column is-11">
+        <subject :subject="currentSentences.subject"
+            :chapter="currentSentences.chapter">
+        </subject>
+      </div>
       <template v-for="(sentence, index) in currentSentences.content">
         <div class="column is-1">
-          <a class="button is-large">
+          <span class="tag is-light is-large">
             {{ index + 1 }}
-          </a>
+          </span>
         </div>
         <div class="column is-11">
-          <message :sentence="sentence"></message>
+          <card :sentence="sentence"></card>
         </div>
       </template>
     </div>
@@ -19,10 +26,11 @@
 </template>
 
 <script>
-import Message from './Message.vue'
+import Subject from './Subject.vue'
+import Card from './Card.vue'
 
 export default {
-  components: { Message },
+  components: { Subject, Card },
   props: ['currentSentences']
 }
 </script>
