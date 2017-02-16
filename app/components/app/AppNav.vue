@@ -13,7 +13,7 @@
           ホーム
         </router-link>
         <router-link class="nav-item"
-            to="/course/first"
+            to="/course"
             active-class="is-active">
           コース
         </router-link>

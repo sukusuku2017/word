@@ -13,15 +13,18 @@
     <tbody>
       <tr v-for="record in currentCourse.content">
         <td>{{ record.ch }}</td>
-        <td>{{ record.st }}</td>
+        <td>{{ record.st || '-' }}</td>
         <td>
           <router-link class="button is-primary"
               :to="`/sentence/${record.ch}`"
               v-if="record.st">
             S
           </router-link>
+          <button v-else class="button is-primary is-outlined is-disabled">
+            S
+          </button>
         </td>
-        <td>{{ record.wd }}</td>
+        <td>{{ record.wd || '-' }}</td>
         <template v-if="record.wd">
           <td>
             <router-link :to="`/list/${record.ch}`"
