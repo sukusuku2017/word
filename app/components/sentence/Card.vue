@@ -24,10 +24,10 @@ export default {
 .card-sentence .card-content {
   font-size: 2rem;
 }
+
 .card-sentence .card-footer-item {
   font-size: 1.5rem;
   justify-content: flex-start;
   padding-left: 1.5rem;
 }
-
 </style>
