@@ -11,6 +11,7 @@ const sentencesModule = {
         "chapter": "21",
         "update": "2017-02-15",
         "author": [],
+        "subject": {},
         "content": []
       }
       */

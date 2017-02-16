@@ -22,7 +22,7 @@ export default {
 <style lang="css">
 .bold {
   font-weight: bold;
-  color: #00008b;
+  color: #6495ed;
 }
 .color {
   color: #ff8c00;
