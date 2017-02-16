@@ -1,11 +1,14 @@
 <template lang="html">
   <div>
-    <hero :course_ordinal="course_ordinal"></hero>
+    <hero :currentCourse="currentCourse"
+        :courses="courses"
+        v-on:switchCourse="switchCourse">
+    </hero>
     <section class="section">
       <div class="container">
         <div class="columns">
           <div class="column is-6 is-offset-3">
-            <app-table :currentCourse="currentCourse"></app-table>
+            <app-table v-if="currentCourse" :currentCourse="currentCourse"></app-table>
           </div>
         </div>
       </div>
@@ -14,8 +17,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import _ from 'lodash'
+import { mapGetters } from 'vuex'
 
 import * as types from 'store/types'
 import Hero from './course/Hero.vue'
@@ -25,38 +27,28 @@ export default {
 
   components: { Hero, AppTable },
 
-  data() {
-    return {
-      'course_ordinal': 'first'
-    }
-  },
-
-  computed: mapState({
-    content: state => state.course.content,
-
-    currentCourse(state) {
-      let course = _.find(state.course.content, { code: this.course_ordinal })
-      return course ? course.content : []
-    }
-  }),
+  computed: mapGetters([
+    'currentCourse',
+    'courses'
+  ]),
 
   created() {
-    this.changeOrdinal()
-  },
-
-  watch: {
-    '$route': 'changeOrdinal'
+    this.fetchCourse()
   },
 
   methods: {
-    changeOrdinal() {
-      this.course_ordinal = this.$route.params.course_ordinal
-
+    fetchCourse() {
       if (!this.$store.state.course.content.length) {
         this.$store.dispatch({
           type: types.FETCH_COURSE
         })
       }
+    },
+    switchCourse(course) {
+      this.$store.commit({
+        type: types.SWITCH_COURSE,
+        course
+      })
     }
   }
 }

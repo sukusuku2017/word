@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="record in currentCourse">
+      <tr v-for="record in currentCourse.content">
         <td>{{ record.ch }}</td>
         <td>{{ record.st }}</td>
         <td>

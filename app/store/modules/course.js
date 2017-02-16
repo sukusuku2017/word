@@ -1,9 +1,11 @@
 import { set } from 'vue'
+import _ from 'lodash'
 import API from 'api'
 import * as types from 'store/types'
 
 const courseModule = {
   state: {
+    currentCourse: 0,
     content: [
       /*
       {
@@ -17,6 +19,16 @@ const courseModule = {
     ]
   },
 
+  getters: {
+    currentCourse: state => state.content[state.currentCourse],
+
+    courses: (state) => {
+      return _.map(state.content, (course) => {
+        return _.pick(course, ['code', 'text'])
+      })
+    }
+  },
+
   actions: {
     [types.FETCH_COURSE] (context) {
       API.getCourse()
@@ -27,6 +39,9 @@ const courseModule = {
   },
 
   mutations: {
+    [types.SWITCH_COURSE] (state, { course }) {
+      set(state, 'currentCourse', course)
+    },
     [types.RECEIVE_COURSE] (state, { course }) {
       set(state, 'content', course)
     }

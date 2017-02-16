@@ -15,11 +15,11 @@
       <nav class="tabs is-boxed">
         <div class="container">
           <ul>
-            <li v-for="course in courseData"
-                :class="{ 'is-active': course_ordinal === course.code }">
-              <router-link :to="`/course/${course.code}`">
+            <li v-for="(course, index) in courses"
+                :class="{ 'is-active': currentCourse.code === course.code }">
+              <a @click="switchCourse(index)">
                 {{ course.text }}
-              </router-link>
+              </a>
             </li>
           </ul>
         </div>
@@ -29,22 +29,14 @@
 </template>
 
 <script>
-const courseData = [
-  { code: 'first',  text: '1コース' },
-  { code: 'second', text: '2コース' },
-  { code: 'third',  text: '3コース' },
-  { code: 'fourth', text: '4コース' }
-]
-
 export default {
+  props: ['currentCourse', 'courses'],
 
-  data() {
-    return {
-      courseData
+  methods: {
+    switchCourse(index) {
+      this.$emit('switchCourse', index)
     }
-  },
-
-  props: ['course_ordinal']
+  }
 }
 </script>
 
