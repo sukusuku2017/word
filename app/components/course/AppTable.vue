@@ -12,7 +12,9 @@
     </thead>
     <tbody>
       <tr v-for="record in currentCourse.content">
-        <td>{{ record.ch }}</td>
+        <td>
+          <span class="tag is-dark">{{ record.ch }}</span>
+        </td>
         <td>{{ record.st || '-' }}</td>
         <td>
           <router-link class="button is-primary"
