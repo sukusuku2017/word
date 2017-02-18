@@ -1,20 +1,22 @@
 <template lang="html">
-  <section class="section">
+  <section class="section section-course">
     <div class="container">
-      <div class="columns is-multiline">
-        <div class="column is-6" v-for="(co, index) in courses">
-<div class="card">
-  <div class="card-content">
-    <button class="button is-large is-primary is-outlined">
-      {{ co.title }}
-    </button>
-    <div class="content">
-      <p>{{ co.description }}</p>
-      <br>
-      <small>11:09 PM - 1 Jan 2016</small>
-    </div>
-  </div>
-</div>
+      <div class="columns" v-for="(co, index) in courses">
+        <div class="column">
+          <h2 class="title is-2">
+            {{ co.title }}
+          </h2>
+          <p href="" class="subtitle">
+            {{ co.description }}
+          </p>
+        </div>
+
+        <div class="column">
+          <ul>
+            <li v-for="chapter in co.courses">
+              {{ chapter.contents }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -33,4 +35,7 @@ export default {
 </script>
 
 <style lang="css">
+.section-course .columns {
+  border-top: solid 1px;
+}
 </style>

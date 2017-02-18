@@ -24,99 +24,113 @@ export default {
   data() {
     return {
       currentSentences: {
-        "chapter": "00",
-        "update": "2017-02-16",
+        "chapter": "11",
+        "update": "2017-02-17",
         "author": [
           "Phil"
         ],
         "subject": {
           "characters": [
             {
-              "base": "中",
-              "ruby": "なか"
+              "base": "旅",
+              "ruby": "りょ"
             },
             {
-              "base": "村",
-              "ruby": "むら"
+              "base": "行",
+              "ruby": "こう"
             },
             {
-              "base": "さんが"
+              "base": "は"
             },
             {
-              "base": "結",
-              "ruby": "けっ"
+              "base": "８",
+              "ruby": "はち"
             },
             {
-              "base": "婚",
-              "ruby": "こん"
+              "base": "月",
+              "ruby": "がつ"
             },
             {
-              "base": "するそうです。"
+              "base": "４日",
+              "ruby": "よっか"
+            },
+            {
+              "base": "まででした。"
             }
           ],
-          "mean": "나까무라 씨가 결혼한다고 합니다."
+          "mean": "여행은 8월 4일까지였습니다."
         },
         "content": [
           {
             "characters": [
               {
-                "base": "友",
-                "ruby": "とも"
-              },
-              {
-                "base": "だちの"
-              },
-              {
-                "base": "話",
-                "ruby": "はなし"
-              },
-              {
-                "base": "によると",
-                "color": true
-              },
-              {
-                "base": "、"
-              },
-              {
-                "base": "彼",
-                "ruby": "かれ"
-              },
-              {
-                "base": "の"
-              },
-              {
-                "base": "趣",
-                "ruby": "しゅ"
-              },
-              {
-                "base": "味",
-                "ruby": "み"
+                "base": "今日",
+                "ruby": "きょう"
               },
               {
                 "base": "は"
               },
               {
-                "base": "旅",
-                "ruby": "りょ"
+                "base": "何",
+                "ruby": "なん",
+                "color": true
               },
               {
-                "base": "行",
-                "ruby": "こう"
+                "base": "月",
+                "ruby": "がつ",
+                "color": true
               },
               {
-                "base": "だ"
+                "base": "何",
+                "ruby": "なん",
+                "color": true
               },
               {
-                "base": "そうです"
+                "base": "日",
+                "ruby": "にち",
+                "color": true
+              },
+              {
+                "base": "ですか",
+                "color": true
               },
               {
                 "base": "。"
               }
             ],
-            "mean": "친구의 말에 의하면, 그의 취미는 여행이라고 합니다."
+            "mean": "오늘은 몇 월 며칠입니까?"
+          },
+          {
+            "characters": [
+              {
+                "base": "お"
+              },
+              {
+                "base": "誕",
+                "ruby": "たん"
+              },
+              {
+                "base": "生",
+                "ruby": "じょう"
+              },
+              {
+                "base": "日",
+                "ruby": "び"
+              },
+              {
+                "base": "はいつですか",
+                "color": true
+              },
+              {
+                "base": "。"
+              }
+            ],
+            "mean": "생일은 언제입니까?"
           }
         ]
       }
+
+
     }
   }
 }

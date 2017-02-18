@@ -3,22 +3,22 @@
     <div class="hero-body">
       <div class="container">
         <nav class="columns">
-          <div class="column has-text-centered" >
-            <h2 class="title is-2">4</h2>
+          <router-link to="/course" class="column has-text-centered" >
+            <h3 class="title is-3"><strong>4</strong></h3>
             <p class="subtitle"><strong>Course</strong></p>
-          </div>
-          <div class="column has-text-centered" >
-            <h2 class="title is-2">40</h2>
+          </router-link>
+          <router-link to="/course" class="column has-text-centered" >
+            <h3 class="title is-3"><strong>40</strong></h3>
             <p class="subtitle"><strong>Chapter</strong></p>
-          </div>
-          <div class="column has-text-centered" >
-            <h2 class="title is-2">789</h2>
+          </router-link>
+          <router-link to="/course" class="column has-text-centered" >
+            <h3 class="title is-3"><strong>789</strong></h3>
             <p class="subtitle"><strong>Sentences</strong></p>
-          </div>
-          <div class="column has-text-centered" >
-            <h2 class="title is-2">456K</h2>
+          </router-link>
+          <router-link to="/course" class="column has-text-centered" >
+            <h3 class="title is-3"><strong>456K</strong></h3>
             <p class="subtitle"><strong>Words</strong></p>
-          </div>
+          </router-link>
         </nav>
       </div>
     </div>
@@ -31,4 +31,7 @@ export default {
 </script>
 
 <style lang="css">
+.hero.is-primary a.column:hover .title strong {
+  border-bottom: 1px solid;
+}
 </style>

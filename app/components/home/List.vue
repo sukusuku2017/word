@@ -3,10 +3,20 @@
     <div class="container">
       <div class="columns">
         <div class="column has-text-centered">
-          <h1 class="title is-1">
-            <button class="button is-primary is-large">L</button>
-            リスト
-          </h1>
+          <article class="media">
+            <figure class="media-left">
+              <button class="button is-primary is-large">L</button>
+            </figure>
+            <div class="media-content content">
+              <h1 class="title is-2">
+                リスト
+              </h1>
+              <ul>
+                <li>단어 듣기</li>
+                <li>일본어, 한국어 표시 변환</li>
+              </ul>
+            </div>
+          </article>
         </div>
         <div class="column">
           <panel :currentWords="currentWords"></panel>
@@ -26,7 +36,7 @@ export default {
   data() {
     return {
       currentWords: {
-        "chapter": "00",
+        "chapter": "04",
         "content": [
           {
             "characters": [
