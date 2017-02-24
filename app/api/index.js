@@ -18,5 +18,11 @@ export default {
     return axios.get(`/api/words/wd${chapter_id}.json`)
                 .then(response => response.data)
                 .catch(error => error)
+  },
+
+  getException({ chapter_id }) {
+    return axios.get(`/api/exceptions/ex${chapter_id}.json`)
+                .then(response => response.data)
+                .catch(error => error)
   }
 }

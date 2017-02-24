@@ -8,6 +8,7 @@
         <th>單語</th>
         <th>リスト</th>
         <th>カード</th>
+        <th>カード</th>
       </tr>
     </thead>
     <tbody>
@@ -52,6 +53,17 @@
               C
             </button>
           </td>
+        </template>
+        <template v-if="record.ex">
+          <td>
+            <router-link :to="`/exception/${record.ch}`"
+                class="button is-primary">
+              X
+            </router-link>
+          </td>
+        </template>
+        <template v-else>
+          <td></td>
         </template>
         </td>
       </tr>

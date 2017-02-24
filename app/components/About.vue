@@ -1,7 +1,9 @@
 <template lang="html">
-  <div class="about">
-    <h1>About</h1>
-  </div>
+  <section class="section">
+    <div class="about">
+      <h1>About</h1>
+    </div>
+  </section>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 import { set } from 'vue'
-import _ from 'lodash'
+import _ from 'underscore'
 import API from 'api'
 import * as types from 'store/types'
 
