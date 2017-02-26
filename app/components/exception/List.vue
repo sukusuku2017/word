@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="app-card-list">
     <h3 class="title is-3">
-      第 {{ currentWords.chapter }} 課
+      {{ currentWords.title }}
     </h3>
     <div class="columns is-multiline">
       <div class="column is-6-tablet"

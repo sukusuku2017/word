@@ -8,7 +8,7 @@ const exceptionsModule = {
     exceptions: {
       /*
       chapter_id: {
-        "chapter": "04",
+        "title": "자동사/타동사",
         "update": "2017-02-07",
         "author": [],
         "content": []
