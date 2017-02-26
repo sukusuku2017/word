@@ -2,6 +2,7 @@
   <div class="home">
     <hero></hero>
     <feature></feature>
+    <course></course>
     <hr class="is-maginless">
     <sentence></sentence>
     <hr class="is-maginless">

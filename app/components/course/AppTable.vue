@@ -8,7 +8,7 @@
         <th>單語</th>
         <th>リスト</th>
         <th>カード</th>
-        <th>カード</th>
+        <th>特別</th>
       </tr>
     </thead>
     <tbody>

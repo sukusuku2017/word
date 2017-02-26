@@ -4,7 +4,7 @@
       第 {{ currentWords.chapter }} 課
     </h3>
     <div class="columns is-multiline">
-      <div class="column is-6-tablet is-4-desktop"
+      <div class="column is-6-tablet"
           v-for="word in currentWords.content">
         <card :word="word"></card>
       </div>
