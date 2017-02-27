@@ -118,7 +118,7 @@
         },
         {
           "base": "を",
-          "color": true
+          "bold": true
         },
         {
           "base": "習",
