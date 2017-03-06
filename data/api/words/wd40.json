@@ -1,0 +1,408 @@
+{
+  "chapter": "40",
+  "update": "2017-03-06",
+  "author": [
+    "Phil"
+  ],
+  "content": [
+    {
+      "characters": [
+        {
+          "base": "いよいよ"
+        }
+      ],
+      "mean": "마침내"
+    },
+    {
+      "characters": [
+        {
+          "base": "卒",
+          "mean": "마칠 졸",
+          "ruby": "そつ"
+        },
+        {
+          "base": "業",
+          "mean": "업 업",
+          "ruby": "ぎょう"
+        },
+        {
+          "base": "パーティー"
+        }
+      ],
+      "mean": "졸업파티"
+    },
+    {
+      "characters": [
+        {
+          "base": "ちゃんと"
+        }
+      ],
+      "mean": "꼼꼼하게/틀림없이"
+    },
+    {
+      "characters": [
+        {
+          "base": "できている"
+        }
+      ],
+      "mean": "되어 있다"
+    },
+    {
+      "characters": [
+        {
+          "base": "確",
+          "mean": "굳을 확",
+          "ruby": "かく"
+        },
+        {
+          "base": "認",
+          "mean": "알 인",
+          "ruby": "にん"
+        },
+        {
+          "base": "する"
+        }
+      ],
+      "mean": "확인하다"
+    },
+    {
+      "characters": [
+        {
+          "base": "注",
+          "mean": "부을 주",
+          "ruby": "ちゅう"
+        },
+        {
+          "base": "文",
+          "mean": "글월 문",
+          "ruby": "もん"
+        },
+        {
+          "base": "する"
+        }
+      ],
+      "mean": "주문하다"
+    },
+    {
+      "characters": [
+        {
+          "base": "他",
+          "mean": "다를 타",
+          "ruby": "ほか"
+        }
+      ],
+      "mean": "다른"
+    },
+    {
+      "characters": [
+        {
+          "base": "冷",
+          "mean": "찰 랭",
+          "ruby": "ひ"
+        },
+        {
+          "base": "やす"
+        }
+      ],
+      "mean": "식히다/차게 하다"
+    },
+    {
+      "characters": [
+        {
+          "base": "電",
+          "mean": "번개 전",
+          "ruby": "でん"
+        },
+        {
+          "base": "池",
+          "mean": "못 지",
+          "ruby": "ち"
+        }
+      ],
+      "mean": "건전지"
+    },
+    {
+      "characters": [
+        {
+          "base": "楽",
+          "mean": "즐길 락",
+          "ruby": "たの"
+        },
+        {
+          "base": "しみだ"
+        }
+      ],
+      "mean": "기대되다"
+    },
+    {
+      "characters": [
+        {
+          "base": "走",
+          "mean": "달릴 주",
+          "ruby": "はし"
+        },
+        {
+          "base": "る"
+        }
+      ],
+      "mean": "달리다"
+    },
+    {
+      "characters": [
+        {
+          "base": "木",
+          "mean": "나무 목",
+          "ruby": "き"
+        }
+      ],
+      "mean": "나무"
+    },
+    {
+      "characters": [
+        {
+          "base": "お"
+        },
+        {
+          "base": "客",
+          "mean": "손 객",
+          "ruby": "きゃく"
+        },
+        {
+          "base": "さん"
+        }
+      ],
+      "mean": "손님"
+    },
+    {
+      "characters": [
+        {
+          "base": "スーツ"
+        }
+      ],
+      "mean": "정장"
+    },
+    {
+      "characters": [
+        {
+          "base": "飾",
+          "mean": "꾸밀 식",
+          "ruby": "かざ"
+        },
+        {
+          "base": "る"
+        }
+      ],
+      "mean": "장식하다"
+    },
+    {
+      "characters": [
+        {
+          "base": "残",
+          "mean": "해칠 잔",
+          "ruby": "のこ"
+        },
+        {
+          "base": "る"
+        }
+      ],
+      "mean": "남다"
+    },
+    {
+      "characters": [
+        {
+          "base": "壁",
+          "mean": "벽 벽",
+          "ruby": "かべ"
+        }
+      ],
+      "mean": "벽"
+    },
+    {
+      "characters": [
+        {
+          "base": "メモ"
+        }
+      ],
+      "mean": "메모"
+    },
+    {
+      "characters": [
+        {
+          "base": "貼",
+          "mean": "붙일 첩",
+          "ruby": "は"
+        },
+        {
+          "base": "る"
+        }
+      ],
+      "mean": "붙이다"
+    },
+    {
+      "characters": [
+        {
+          "base": "掃",
+          "mean": "쓸 소",
+          "ruby": "そう"
+        },
+        {
+          "base": "除",
+          "mean": "덜 제",
+          "ruby": "じ"
+        },
+        {
+          "base": "する"
+        }
+      ],
+      "mean": "청소하다"
+    },
+    {
+      "characters": [
+        {
+          "base": "次",
+          "mean": "버금 차",
+          "ruby": "つぎ"
+        }
+      ],
+      "mean": "다음"
+    },
+    {
+      "characters": [
+        {
+          "base": "問",
+          "mean": "물을 문",
+          "ruby": "もん"
+        },
+        {
+          "base": "題",
+          "mean": "제목 제",
+          "ruby": "だい"
+        }
+      ],
+      "mean": "문제"
+    },
+    {
+      "characters": [
+        {
+          "base": "〜について"
+        }
+      ],
+      "mean": "~에 대해서"
+    },
+    {
+      "characters": [
+        {
+          "base": "考",
+          "mean": "생각할 고",
+          "ruby": "かんが"
+        },
+        {
+          "base": "える"
+        }
+      ],
+      "mean": "생각하다"
+    },
+    {
+      "characters": [
+        {
+          "base": "洗",
+          "mean": "씻을 세",
+          "ruby": "あら"
+        },
+        {
+          "base": "う"
+        }
+      ],
+      "mean": "씻다"
+    },
+    {
+      "characters": [
+        {
+          "base": "磨",
+          "mean": "갈 마",
+          "ruby": "みが"
+        },
+        {
+          "base": "く"
+        }
+      ],
+      "mean": "닦다"
+    },
+    {
+      "characters": [
+        {
+          "base": "山",
+          "mean": "메 산",
+          "ruby": "やま"
+        },
+        {
+          "base": "登",
+          "mean": "오를 등",
+          "ruby": "のぼ"
+        },
+        {
+          "base": "り"
+        }
+      ],
+      "mean": "등산"
+    },
+    {
+      "characters": [
+        {
+          "base": "地",
+          "mean": "땅 지",
+          "ruby": "ち"
+        },
+        {
+          "base": "図",
+          "mean": "그림 도",
+          "ruby": "ず"
+        }
+      ],
+      "mean": "지도"
+    },
+    {
+      "characters": [
+        {
+          "base": "就",
+          "mean": "나아갈 취",
+          "ruby": "しゅう"
+        },
+        {
+          "base": "職",
+          "mean": "직분 직",
+          "ruby": "しょく"
+        },
+        {
+          "base": "面",
+          "mean": "낯 면",
+          "ruby": "めん"
+        },
+        {
+          "base": "接",
+          "mean": "이을 접",
+          "ruby": "せつ"
+        }
+      ],
+      "mean": "취직 면접"
+    },
+    {
+      "characters": [
+        {
+          "base": "復",
+          "mean": "다시 부",
+          "ruby": "ふく"
+        },
+        {
+          "base": "習",
+          "mean": "익힐 습",
+          "ruby": "しゅう"
+        },
+        {
+          "base": "する"
+        }
+      ],
+      "mean": "복습하다"
+    }
+  ]
+}

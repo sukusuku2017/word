@@ -12,11 +12,11 @@
             <p class="subtitle"><strong>Chapter</strong></p>
           </div>
           <div class="column has-text-centered" >
-            <h3 class="title is-3"><strong>789</strong></h3>
+            <h3 class="title is-3"><strong>131</strong></h3>
             <p class="subtitle"><strong>Sentences</strong></p>
           </div>
           <div class="column has-text-centered" >
-            <h3 class="title is-3"><strong>456K</strong></h3>
+            <h3 class="title is-3"><strong>1701</strong></h3>
             <p class="subtitle"><strong>Words</strong></p>
           </div>
         </nav>
