@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       currentWords: {
-        "chapter": "04",
+        "chapter": "00",
         "content": [
           {
             "characters": [
