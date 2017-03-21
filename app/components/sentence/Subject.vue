@@ -1,9 +1,7 @@
 <template lang="html">
   <div class="card card-subject">
     <header class="card-header">
-      <audio controls="controls" preload="none">
-        <source :src="`/mp3/sentences/st${chapter}.mp3`" type="audio/mp3">
-      </audio>
+      <word-audio :chapter="chapter" type="sentences"></word-audio>
     </header>
     <div class="card-content">
       <div class="content">
@@ -19,10 +17,11 @@
 </template>
 
 <script>
+import WordAudio from 'components/common/WordAudio.vue'
 import RubySentence from 'components/common/RubySentence.vue'
 
 export default {
-  components: { RubySentence },
+  components: { WordAudio, RubySentence },
   props: ['chapter', 'subject']
 }
 </script>
@@ -30,10 +29,6 @@ export default {
 <style lang="css">
 .card-subject .card-header {
   padding: 0.5em 0.75em;
-}
-
-.card-subject audio {
-  height: 36px;
 }
 
 .card-subject .card-content {

@@ -13,18 +13,16 @@
       </div>
     </div>
     <div class="panel-block panel-audio">
-      <audio controls="controls" preload="none">
-        <source :src="`/mp3/words/wd${currentWords.chapter}.mp3`" type="audio/mp3">
-      </audio>
+      <word-audio :chapter="currentWords.chapter" type="word"></word-audio>
     </div>
     <p class="panel-tabs is-medium">
-      <a v-for="view in viewModes"
+      <a v-for="view in viewModes" :key="view.code"
           :class="{ 'is-active': visibility === view.code }"
           @click="visibility = view.code">
         {{ view.text }}
       </a>
     </p>
-    <word v-for="word in currentWords.content"
+    <word v-for="(word, idx) in currentWords.content" :key="idx"
         :word="word"
         :panel-visibility="visibility">
     </word>
@@ -32,6 +30,7 @@
 </template>
 
 <script>
+import WordAudio from 'components/common/WordAudio.vue'
 import Word from './Word.vue'
 
 const viewModes = [
@@ -41,17 +40,14 @@ const viewModes = [
 ]
 
 export default {
-
-  components: { Word },
-
+  components: { WordAudio, Word },
   props: ['currentWords'],
-
   data() {
     return {
       visibility: 'all',
       viewModes
     }
-  },
+  }
 }
 </script>
 
@@ -60,7 +56,7 @@ export default {
   font-size: 1.25em;
 }
 
-.panel-audio audio {
+/*.panel-audio audio {
   height: 46px;
-}
+}*/
 </style>

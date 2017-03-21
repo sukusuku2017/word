@@ -13,3 +13,6 @@ export const RECEIVE_WORD = 'words/RECEIVE_WORD'
 export const SWITCH_EXCEPTION = 'exception/SWITCH_EXCEPTION'
 export const FETCH_EXCEPTION = 'exception/FETCH_EXCEPTION'
 export const RECEIVE_EXCEPTION = 'exception/RECEIVE_EXCEPTION'
+
+export const MP3_SE = 'gs://sukusuku-9b393.appspot.com/mp3/sentences/st'
+export const MP3_WD = 'gs://sukusuku-9b393.appspot.com/mp3/words/wd'
