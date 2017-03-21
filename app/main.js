@@ -13,8 +13,6 @@ import About from 'components/About.vue'
 
 import store from 'store'
 
-import 'template/style.css'
-
 Vue.use(VueRouter)
 
 const routes = [

@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
 
@@ -24,7 +25,15 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            css: ExtractTextPlugin.extract({
+              use: 'css-loader',
+              fallback: 'vue-style-loader'
+            })
+          }
+        }
       },
       {
         test: /\.js$/,
@@ -33,7 +42,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
+        include: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -52,6 +65,8 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: 'app/index.html'
-    })
+    }),
+
+    new ExtractTextPlugin('[name].[chunkhash].css')
   ]
 }
